@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="myName" type="com.example.databasetest.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/question"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:height="50dp"
+            android:hint="@string/inputHint"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:inputType="textPersonName"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:text="@={ myName.name }"/>
+
+    </LinearLayout>
+</layout>
