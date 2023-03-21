@@ -34,6 +34,17 @@
             android:layout_gravity="center_horizontal"
             android:inputType="textPersonName"/>
 
+        <EditText
+            android:id="@+id/textId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:height="50dp"
+            android:hint="Your ID"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:inputType="number"/>
+
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
