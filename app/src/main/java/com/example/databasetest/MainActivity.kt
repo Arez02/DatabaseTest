@@ -115,26 +115,28 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayData()
     {
+        var userID = ArrayList<String>()
+        var userName = ArrayList<String>()
         data.child("Users").get().addOnSuccessListener()
         {
             if(it.exists())
             {
                 for(allData in it.children)
                 {
-                    var key = allData.key.toString()
                     for(allInnerData in allData.children)
                     {
-                        var value = allInnerData.value.toString()
-                        var temp = value
+                        var count = 1
+                        if(count == 1)
+                        {
+                            userName.add(allInnerData.value.toString())
+                            count++
+                        }
+                        else if(count == 2)
+                        {
+                            userID.add(allInnerData.value.toString())
+                        }
                     }
-                    binding.listView.append("$key")
                 }
-//                var allData : HashMap<String, String> = it.value as HashMap<String, String>
-//                allData.forEach { (key, value) -> println("$key: $value") }
-//                for((key, value) in allData)
-//                {
-//                    binding.listView.append("$key., $value")
-//                }
             }
         }
     }
